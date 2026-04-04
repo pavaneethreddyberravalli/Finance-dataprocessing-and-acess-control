@@ -1,0 +1,42 @@
+spring:
+  application:
+    name: finance
+  datasource:
+    url: jdbc:mysql://localhost:3306/Finance_db?createDatabaseIfNotExist=true
+    username: root
+    password: root
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show_sql: true
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQLDialect
+
+  jwt:
+    secret: TXlTZWNyZXRLZXlNeVNlY3JldEtleU15U2VjcmV0S2V5MTIzNDU2
+    expiration: 3600000
+    refresh-expiration: 86400000
+#
+#  mail:
+#    host: smtp.gmail.com
+#    port: 587
+#    username: trysol99@gmail.com
+#    password: mrdu ivim gkga ljak
+#    properties:
+#      mail:
+#        smtp:
+#          auth: true
+#          starttls:
+#            enable: true
+#          ssl:
+#            trust: smtp.gmail.com
+#  springdoc:
+#    api-docs:
+#      path: /v3/api-docs
+#    swagger-ui:
+#      path: /swagger-ui.html
+#      operationsSorter: alpha
+#      deepLinking: true
+#      displayRequestDuration: true
